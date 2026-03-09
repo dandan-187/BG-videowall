@@ -3,21 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Animated GIF Background</title>
+  <title>GIF Background Test</title>
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-    
     html, body {
       width: 100%;
       height: 100%;
       overflow: hidden;
       background: #000;
     }
-    
     .background {
       position: fixed;
       top: 0;
@@ -26,16 +24,14 @@
       height: 100%;
       z-index: 1;
     }
-    
     .background img {
       width: 100%;
       height: 100%;
-      object-fit: cover;           /* cover = fills screen, may crop */
-      /* object-fit: contain; */   /* uncomment if you want full GIF visible without cropping */
+      object-fit: cover;          /* fills screen, crops if needed */
+      /* object-fit: contain; */ /* uncomment for no crop, shows full GIF */
       object-position: center;
-      pointer-events: none;        /* clicks go through to content below */
+      pointer-events: none;
     }
-    
     .content {
       position: relative;
       z-index: 2;
@@ -47,34 +43,23 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      /* Optional: semi-transparent dark overlay so text is readable */
-      background: rgba(0, 0, 0, 0.3);
+      background: rgba(0, 0, 0, 0.4); /* dark overlay for readability */
     }
-    
     h1 {
       font-size: 3rem;
-      margin-bottom: 1rem;
-      text-shadow: 0 0 10px rgba(0,0,0,0.8);
-    }
-    
-    p {
-      font-size: 1.3rem;
-      max-width: 80%;
+      text-shadow: 0 0 10px black;
     }
   </style>
 </head>
 <body>
-
   <div class="background">
-    <img src="http://localhost/last.gif" alt="animated background">
+    <img src="https://raw.githubusercontent.com/dandan-187/BG-videowall/main/last.gif" alt="animated background GIF">
   </div>
 
   <div class="content">
-    <h1>Welcome to My App</h1>
-    <p>This GIF is now your moving background.<br>Put your buttons, text, or anything here.</p>
-    
-    <!-- Example: add your MIT App Inventor buttons/labels over this later if needed -->
+    <h1>GIF Background Working!</h1>
+    <p>Your animated GIF from GitHub should now be moving as the full-screen background.</p>
+    <p>If it's still static/blank: Open the raw link alone in a new tab → does it animate there?</p>
   </div>
-
 </body>
 </html>
