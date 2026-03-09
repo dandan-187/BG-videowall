@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GIF Background Test</title>
+  <title></title>
   <style>
     * {
       margin: 0;
@@ -16,50 +16,12 @@
       overflow: hidden;
       background: #000;
     }
-    .background {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-    }
-    .background img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;          /* fills screen, crops if needed */
-      /* object-fit: contain; */ /* uncomment for no crop, shows full GIF */
-      object-position: center;
-      pointer-events: none;
-    }
-    .content {
-      position: relative;
-      z-index: 2;
-      width: 100%;
-      height: 100%;
-      color: white;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background: rgba(0, 0, 0, 0.4); /* dark overlay for readability */
-    }
-    h1 {
-      font-size: 3rem;
-      text-shadow: 0 0 10px black;
+    body {
+      background: url('https://raw.githubusercontent.com/dandan-187/BG-videowall/main/last.gif') no-repeat center center fixed;
+      background-size: cover;
     }
   </style>
 </head>
 <body>
-  <div class="background">
-    <img src="https://raw.githubusercontent.com/dandan-187/BG-videowall/main/last.gif" alt="animated background GIF">
-  </div>
-
-  <div class="content">
-    <h1>GIF Background Working!</h1>
-    <p>Your animated GIF from GitHub should now be moving as the full-screen background.</p>
-    <p>If it's still static/blank: Open the raw link alone in a new tab → does it animate there?</p>
-  </div>
 </body>
 </html>
